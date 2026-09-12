@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap");
+
+:root {
+  --purple: #673ab7;
+  --purple-dark: #5c35a3;
+  --purple-tint: #e8ddf8;
+  --bg: #f0ebf8;
+  --card: #ffffff;
+  --border: #dadce0;
+  --text: #202124;
+  --text-secondary: #5f6368;
+  --required: #d93025;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Roboto", "Noto Sans JP", Arial, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 24px 12px 80px;
+}
+
+.container {
+  width: 100%;
+  max-width: 644px;
+}
+
+.langTabs {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+
+.langTabs button {
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.langTabs button.active {
+  background: var(--purple-tint);
+  color: var(--purple-dark);
+  font-weight: 500;
+}
+
+.headerCard {
+  background: var(--card);
+  border-top: 10px solid var(--purple);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  padding: 24px 24px;
+  margin-bottom: 8px;
+}
+
+.headerCard h1 {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 8px 0 4px;
+}
+
+.headerCard .desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 12px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.requiredNote {
+  font-size: 13px;
+  color: var(--required);
+  margin: 16px 4px;
+}
+
+.fieldCard {
+  background: var(--card);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  padding: 20px 24px 28px;
+  margin-bottom: 8px;
+  border-left: 4px solid transparent;
+}
+
+.fieldCard:focus-within {
+  border-left: 4px solid var(--purple);
+}
+
+.fieldCard label {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.fieldCard .req {
+  color: var(--required);
+  margin-left: 2px;
+}
+
+.dateRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.dateGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.dateGroup span {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.dateGroup input {
+  font-family: inherit;
+  font-size: 15px;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  padding: 4px 2px 8px;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+}
+
+.dateGroup input:focus {
+  border-bottom: 2px solid var(--purple);
+}
+
+.dateGroup.mm input,
+.dateGroup.dd input {
+  width: 40px;
+}
+
+.dateGroup.yyyy input {
+  width: 64px;
+}
+
+.textInput {
+  width: 50%;
+  min-width: 240px;
+  font-family: inherit;
+  font-size: 15px;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  padding: 4px 2px 8px;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+}
+
+.textInput:focus {
+  border-bottom: 2px solid var(--purple);
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px;
+  margin-top: 8px;
+}
+
+.clearLink {
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--purple-dark);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 8px;
+  border-radius: 4px;
+}
+
+.clearLink:hover {
+  background: var(--purple-tint);
+}
+
+.submitBtn {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--purple);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background: var(--purple-dark);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.footer .brand {
+  font-weight: 500;
+}
+
+.confirm {
+  background: var(--card);
+  border-top: 10px solid var(--purple);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.confirm h2 {
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 8px;
+}
+
+.confirm p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
